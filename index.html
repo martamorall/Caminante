@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ejemplo de HTML5">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="shortcut icon" href="./imagenes/curso.png">
+  <title>Caminante</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+  <header id="titulo">
+  <h1>Caminante</h1>
+  </header>
+  <section id="seccion">
+    <div>
+    <header id="subtitulo">
+      <h1>Camino</h1>
+    </header>
+    <div class="map_canvas" id="map_canvas" style="width: 100%;height: 400px;background-color: bisque;">
+    </div>
+
+    <p>Recorrido
+      <select id="listaCalles"></select>
+      <input type="button" name="reiniciar" value="Reiniciar" onClick="history.go(0)">
+    </p>
+
+  
+  <aside id="columna">
+    <ul>
+      <li>Zoom: <input id="zoomMapa" type="range" value="16" min="10" max="20"> <output id="numZoom"
+          value="16">16</output></li>
+      <li>Color: <input id="colorTrazado" type="color"> </li>
+      <li>Grosor: <input id="grosorLinea" type="range" value="2" min="2" max="6"> <output id="numGrosor"
+          value="2">2</output></li>
+    </ul>
+  </aside>
+</div>
+</section>
+  <footer id="pie">
+    Marta Moral - Desarrollo Web Entorno Cliente
+  </footer>
+
+  <script src="./js/funciones.js"></script>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeNRBEIWYeWRRvY8On_9pkSD1_J_zLykQ&libraries=geometry">
+    </script>
+
+  <script src="./js/mapas.js"></script>
+</body>
+
+</html>
